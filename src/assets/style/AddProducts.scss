@@ -1,0 +1,14 @@
+@mixin padding($Padding) {
+    padding : $Padding
+}
+.form-container{
+    @include padding(3rem);
+    height: 100vh;
+    form{
+        @include padding(1.5rem);
+        border-radius: 1rem;
+        textarea{
+            max-height: 8rem;
+        }
+    }
+}

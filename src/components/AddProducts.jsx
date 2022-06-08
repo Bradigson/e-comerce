@@ -1,4 +1,6 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
+import '../assets/style/AddProducts.scss';
+import { motion } from 'framer-motion';
 import app from '../firebase/fFirebase';
 import {getFirestore, collection, addDoc} from 'firebase/firestore';
 import {getStorage, ref, uploadBytes, getDownloadURL} from 'firebase/storage';
@@ -67,8 +69,13 @@ const AddProduct = ()=>{
      
     }
     return(
-        <div>
-            <form className="row g-3" onSubmit={handleSubmit}>
+        
+        <motion.div className='form-container' animate={{y:-20}}>
+            <div className='text-center'>
+                <h1>Store</h1>
+                <p className='text-muted'>add products area, fill up the fields and send to store the products</p>
+            </div>
+            <form className="row g-3 shadow" onSubmit={handleSubmit}>
                 {/* Product img */}
                 <div className="mb-2">
                     <label  className="form-label">Product image</label>
@@ -115,6 +122,7 @@ const AddProduct = ()=>{
                     </select>
                 </div>
              
+                
                 <div className="col-12">
                     <button type="submit" className="btn btn-primary" onClick={()=> setLoading(!loading)}>
                         {
@@ -127,7 +135,7 @@ const AddProduct = ()=>{
                 </div>
             </form>
 
-        </div>
+        </motion.div>
     )
 }
 
