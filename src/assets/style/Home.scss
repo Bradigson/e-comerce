@@ -1,0 +1,76 @@
+@mixin Height ($Height){
+    height:$Height
+}
+.article{
+    .article__container-section{
+        // background: violet;
+        height:100vh;
+        display: flex;
+        place-content: center;
+        align-items: center;
+
+        
+        // section #1
+        .article__container-section1{
+            // background: red;
+            @include Height(80%);
+            display: grid;
+            width:10%;
+           .line{
+            //    background: olivedrab;
+               &::before{
+                   content:'';
+                   display: flex;
+                   width:90%;
+                   height: 2.5px;
+                   background: #000;
+                   transform: rotate(90deg);
+                   margin-top: 70px;
+                   margin-left: -65px;
+               }
+           }
+           ul{
+            //    background: chocolate;
+               padding: 0;
+               li{
+                   list-style: none;
+                //    background: teal;
+                   margin-bottom: .5rem;
+                   .nav-link{
+                       transition: all .2s;
+                       &:hover{
+                      
+                           transform: scale(1.1);
+                       }
+                   }
+               }
+           }
+            
+        }
+
+
+        // section2
+        .article__container-section2{
+            // background: forestgreen;
+            width:55%;
+            @include Height(80%);
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
+        // section3
+        .article__container-section3{
+            // background: hotpink;
+            @include Height(80%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+        
+    }
+}
