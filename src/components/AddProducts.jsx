@@ -2,7 +2,7 @@ import {useState} from 'react';
 import '../assets/style/AddProducts.scss';
 import { motion } from 'framer-motion';
 import app from '../firebase/fFirebase';
-import {getFirestore, collection, addDoc} from 'firebase/firestore';
+import {getFirestore, collection, addDoc, serverTimestamp} from 'firebase/firestore';
 import {getStorage, ref, uploadBytes, getDownloadURL} from 'firebase/storage';
 const dataBase = getFirestore(app);
 const storage = getStorage(app);
@@ -27,7 +27,9 @@ const AddProduct = ()=>{
         setAmount(e.target.value);
     }
     const handleCaregory = (e)=>{
-        setCaregory(e.target.value);
+        let catergoria = e.target.value;
+        setCaregory(catergoria.replace(/\s/g,''))
+        // setCaregory(e.target.value);
     }
 
     const handleFile = (e)=>{
@@ -51,7 +53,8 @@ const AddProduct = ()=>{
                     producName,
                     productPrice,
                     amount,
-                    description
+                    description,
+                    timeStamp : serverTimestamp()
                 })
             })
             setLoading(!loading);
@@ -68,6 +71,7 @@ const AddProduct = ()=>{
         
      
     }
+ 
     return(
         
         <motion.div className='form-container' animate={{y:-20}}>

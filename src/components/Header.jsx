@@ -11,7 +11,7 @@ const Header = ()=>{
                     <Button className="btn  position-relative">
                     <i class='bx bx-shopping-bag'></i>
                         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger fs-6">
-                            9
+                            0
                             <span className="visually-hidden">unread messages</span>
                         </span>
                     </Button>
