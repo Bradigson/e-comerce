@@ -25,47 +25,43 @@ const LivinRoom = ()=>{
     },[])
     console.log(livinRoom)
     return(
-        <article className="home-furnishings">
-            <section className="home-furnishings__header d-flex align-items-center justify-content-between pt-3">
+        <article className="home-furnishings pb-5">
+            <motion.section className="home-furnishings__header d-flex align-items-center justify-content-between pt-3 " 
+                            animate={{y:15}} transition={{ duration: 0.5 }}>
                 <div className="d-flex align-items-center justify-content-between ps-2">
-                    <h2 className="fs-4 me-4">Living Room</h2>
+                    <motion.h2 className="fs-4 me-4">Living Room</motion.h2>
                     <span className='text-muted'>shop</span>
                 </div>
                 <div className="d-flex  me-4">
                     <Link to='' className="nav-link me-2">Previous</Link><span className="text-muted">{' | '}</span>
                     <Link to='' className="nav-link ms-2">Next</Link>
                 </div>
-            </section>
-            <section className="product-container">
+            </motion.section>
+            <section className="product-container mt-5">
                 {
                     livinRoom.map(room=>{
                         return(
-                            <motion.div key={room.id} className='products' 
-                                        whileHover={{ scale: 1.1 }}
-                                        drag
-                                        dragConstraints={{
-                                        top: -2,
-                                        left: -2,
-                                        right: 2,
-                                        bottom: 2,
-                                        }}>
+                            <Link to={`/product_area/${room.producName}`} className="nav-link" key={room.id}>
+                            <motion.div  className='products' 
+                                        whileHover={{ scale: 1.1 }}>
                                             
                                 <div className="product-img">
                                     <img src={room.url}/>
                                 </div>
                                 <div>
-                                    <div>
-                                         <h2>{room.producName}</h2>
+                                    <div >
+                                         <h2 className="fs-5">{room.producName}</h2>
                                     </div>
                                     
                                     <div>
-                                        <spna>{room.productPrice}</spna><br/>
-                                        <span>{room.description}</span><br/>
-                                        <span>{room.amount}</span>
+                                        <span>Price : {room.productPrice}</span><br/>
+                                        <span>Size : {room.description}</span><br/>
+                                        <span>Available : {room.amount}</span>
                                     </div>
                                     
                                 </div>
                             </motion.div>
+                            </Link>
                         )
                     })
                 }
