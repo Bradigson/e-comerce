@@ -14,10 +14,11 @@ const Home = ()=>{
                     <div className="line"></div>
                     <div>
                         <ul>
-                            <li><NavLink to="" className='nav-link'>Home Furnishings</NavLink></li>
+                            <li><NavLink to="living_room" className='nav-link'>Living Room</NavLink></li>
                             <li><NavLink to="" className='nav-link'>Accessories</NavLink></li>
                             <li><NavLink to="" className='nav-link'>Sport</NavLink></li>
                             <li><NavLink to="" className='nav-link'>Clothing Wear</NavLink></li>
+                            <li><NavLink to="" className='nav-link'>Get Coins</NavLink></li>
                         </ul>
                     </div>
                 </sectiion>

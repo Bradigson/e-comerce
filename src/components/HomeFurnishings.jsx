@@ -33,7 +33,7 @@ const LivinRoom = ()=>{
                     <span className='text-muted'>shop</span>
                 </div>
                 <div className="d-flex  me-4">
-                    <Link to='' className="nav-link me-2">Previous</Link><span className="text-muted">{' | '}</span>
+                    <Link to='/' className="nav-link me-2">Previous</Link><span className="text-muted">{' | '}</span>
                     <Link to='' className="nav-link ms-2">Next</Link>
                 </div>
             </motion.section>
@@ -41,7 +41,7 @@ const LivinRoom = ()=>{
                 {
                     livinRoom.map(room=>{
                         return(
-                            <Link to={`/product_area/${room.producName}`} className="nav-link" key={room.id}>
+                            <Link to={`/product_area/${room.id}`} className="nav-link" key={room.id}>
                             <motion.div  className='products' 
                                         whileHover={{ scale: 1.1 }}>
                                             
