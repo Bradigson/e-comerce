@@ -7,7 +7,7 @@ const Home = ()=>{
         <article className="article">
             <div className="article__container-section">
                 {/* section #1 */}
-                <sectiion className="article__container-section1">
+                <section className="article__container-section1">
                     <div className="">
                         <h2>Shop</h2>
                     </div>
@@ -18,18 +18,18 @@ const Home = ()=>{
                             <li><NavLink to="" className='nav-link'>Accessories</NavLink></li>
                             <li><NavLink to="" className='nav-link'>Sport</NavLink></li>
                             <li><NavLink to="" className='nav-link'>Clothing Wear</NavLink></li>
-                            <li><NavLink to="" className='nav-link'>Get Coins</NavLink></li>
+                            <li><NavLink to="coins" className='nav-link'>Get Coins</NavLink></li>
                         </ul>
                     </div>
-                </sectiion>
+                </section>
 
                 {/* section #2 */}
-                <sectiion className="article__container-section2">
+                <section className="article__container-section2">
                     <HomeSlider/>
-                </sectiion>
+                </section>
 
                 {/* section #3 */}
-                <sectiion className="article__container-section3">
+                <section className="article__container-section3">
                     <div className="">
                         <span>1.0</span>
                     </div>
@@ -40,7 +40,7 @@ const Home = ()=>{
                     <div className=" d-flex justify-content-end">
                         <button className="btn btn-outline-dark">Shop now</button>
                     </div>
-                </sectiion>
+                </section>
             </div>
         </article>
     )
