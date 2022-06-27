@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Header from "./Header";
 import '../assets/style/ProductArea.scss';
 import { useState, useEffect } from "react";
@@ -32,6 +32,7 @@ const ProductArea = ()=>{
         <article className="productarea">
             <Header/>
             <div className="product">
+                <Link to='/'>back</Link>
                 {
                     stuff.map(sf=>{
                         return(

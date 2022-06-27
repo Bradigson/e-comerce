@@ -6,9 +6,20 @@ const Counter = ()=>{
     return(
         <div>
             <div className="d-flex align-items-center justify-content-between">
-                <button onClick={()=> dispatch(decrement())}>-</button>
-                    <h4>{count}</h4>
-                <button onClick={()=> dispatch(increment()) }>+</button>
+                {
+                    count === 0 ? (
+                        <button disabled className="btn btn-primar shadow" onClick={()=> dispatch(decrement())}>-</button>
+                    ) : (
+                        <div>
+                            <button className="btn btn-primary shadow" onClick={()=> dispatch(decrement())}>-</button>
+                        </div>
+                    )
+                    
+                }
+
+                    <h4 className="user-select-none">{count}</h4>
+                 <button className="btn btn-success  shadow" onClick={()=> dispatch(increment()) }>+</button>
+                
 
             </div>
 
