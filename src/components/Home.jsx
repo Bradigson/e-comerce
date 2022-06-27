@@ -15,9 +15,10 @@ const Home = ()=>{
                     <div>
                         <ul>
                             <li><NavLink to="living_room" className='nav-link'>Living Room</NavLink></li>
-                            <li><NavLink to="" className='nav-link'>Accessories</NavLink></li>
-                            <li><NavLink to="" className='nav-link'>Sport</NavLink></li>
-                            <li><NavLink to="" className='nav-link'>Clothing Wear</NavLink></li>
+                            <li><NavLink to="" className='nav-link'>Forniture</NavLink></li>
+                            <li><NavLink to="" className='nav-link'>Home Office</NavLink></li>
+                            <li><NavLink to="" className='nav-link'>Bed Room</NavLink></li>
+                            <li><NavLink to="" className='nav-link'>Dining Room</NavLink></li>
                             <li><NavLink to="coins" className='nav-link'>Get Coins</NavLink></li>
                         </ul>
                     </div>
