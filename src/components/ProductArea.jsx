@@ -32,7 +32,7 @@ const ProductArea = ()=>{
         <article className="productarea">
             <Header/>
             <div className="product">
-                <Link to='/'>back</Link>
+                
                 {
                     stuff.map(sf=>{
                         return(
@@ -69,6 +69,9 @@ const ProductArea = ()=>{
                     })
                 }
             </div>
+            <Link to='/living_room' className="position-absolute top-0 start-0  p-2 m-4 rounded-circle fs-3 text-dark">
+                <i className='bx bx-arrow-back'></i>
+            </Link>
         </article>
     )
 }
